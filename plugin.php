@@ -7,9 +7,8 @@ Version: 0.1
 Author: Frank Matheron <frankmatheron@gmail.com>
 Author URI: https://github.com/fenuz
 */
-
 if (!defined('COOKIE_DOMAIN')) {
-    define('COOKIE_DOMAIN', parse_url($_SERVER['HTTP_HOST'], 1));
+    define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST']);
 }
 
 yourls_add_filter('setcookie_domain', 'cookie_domain_setcookie_domain_filter');
